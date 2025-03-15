@@ -7,6 +7,7 @@ export async function loginUser(name: string, email: string): Promise<void> {
       credentials: "include",
       body: JSON.stringify({ name, email }),
     });
+    
     if (!response.ok) {
       throw new Error("Login failed. Please check your credentials and try again.");
     }

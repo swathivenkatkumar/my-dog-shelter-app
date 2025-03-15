@@ -14,7 +14,7 @@ interface DogCardProps {
 const DogCard: React.FC<DogCardProps> = ({ dog, onFavoriteToggle, isFavorited = false }) => {
   return (
     <Card
-      className="mb-4 shadow-sm"
+      className="mb-2 shadow-sm"
       style={{
         minWidth: "18rem",
         borderRadius: "0.5rem",
@@ -27,7 +27,7 @@ const DogCard: React.FC<DogCardProps> = ({ dog, onFavoriteToggle, isFavorited = 
             variant="top"
             src={dog.img}
             alt={`${dog.name} - ${dog.breed}`}
-            style={{ height: "200px", objectFit: "cover", transition: "transform 0.3s" }}
+            style={{ height: "250px", objectFit: "cover", transition: "transform 0.3s" }}
           />
         )}
       </div>

@@ -26,6 +26,7 @@ const Login: React.FC = () => {
 
     try {
       await loginUser(name, email);
+      
       navigate("/search");
     } catch (err) {
       setError("Login failed. Please try again.");

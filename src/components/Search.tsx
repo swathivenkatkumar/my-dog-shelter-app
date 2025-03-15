@@ -215,7 +215,7 @@ const Search: React.FC = () => {
       )}
 
       {/* Filter and Sort Controls */}
-      <Row className="mb-3">
+      <Row className="mb-2">
         <Col md={4}>
           <Form.Group controlId="breedFilter">
             <Form.Label>Filter by Breed:</Form.Label>
