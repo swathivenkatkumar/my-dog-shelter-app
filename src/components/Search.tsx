@@ -1,6 +1,4 @@
-// src/components/Search/Search.tsx
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -252,7 +250,7 @@ const Search: React.FC = () => {
       )}
       {error && <Alert variant="danger">{error}</Alert>}
 
-      {/* Display Dog Cards */}
+      {/* Dog Cards */}
       <Row>
         {dogs.map((dog) => (
           <Col key={dog.id} md={4} className="mb-4">
@@ -265,14 +263,14 @@ const Search: React.FC = () => {
         ))}
       </Row>
 
-      {/* Pagination Controls */}
+      {/* Pagination */}
       <div className="d-flex justify-content-center align-items-center my-3">
         <Pagination>
-          <Pagination.Prev onClick={handlePrev} disabled={!prevCursor} />
+          <Pagination.Prev aria-label="Previous page" onClick={handlePrev} disabled={!prevCursor} />
           <Pagination.Item disabled>
             Page {pageNumber} of {totalPages}
           </Pagination.Item>
-          <Pagination.Next onClick={handleNext} disabled={!nextCursor} />
+          <Pagination.Next aria-label="Next page" onClick={handleNext} disabled={!nextCursor} />
         </Pagination>
       </div>
     </Container>

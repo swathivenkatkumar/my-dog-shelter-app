@@ -1,4 +1,3 @@
-import React from "react";
 import { Dog } from "../services/api";
 import { Card, Button } from "react-bootstrap";
 

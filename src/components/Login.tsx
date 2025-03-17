@@ -30,7 +30,7 @@ const Login: React.FC = () => {
       navigate("/search");
     } catch (err) {
       setError("Login failed. Please try again.");
-      console.error("Error during login:", err);
+      //console.error("Error during login:", err);
       setLoading(false);
     }
   };

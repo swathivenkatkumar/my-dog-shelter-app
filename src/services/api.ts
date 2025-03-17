@@ -1,6 +1,6 @@
 //user login function
 export async function loginUser(name: string, email: string): Promise<void> {
-    const apiUrl = import.meta.env.VITE_API_URL || "https://frontend-take-home-service.fetch.com";
+    const apiUrl = "https://frontend-take-home-service.fetch.com";
     const response = await fetch(`${apiUrl}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -16,7 +16,7 @@ export async function loginUser(name: string, email: string): Promise<void> {
   // Fetch dogs function
 
   export async function fetchBreeds(): Promise<string[]> {
-    const apiUrl = import.meta.env.VITE_API_URL || "https://frontend-take-home-service.fetch.com";
+    const apiUrl = "https://frontend-take-home-service.fetch.com";
     const response = await fetch(`${apiUrl}/dogs/breeds`, {
       method: "GET",
       credentials: "include",
@@ -36,7 +36,7 @@ export async function searchDogs(
     cursor?: string,
     size: number = 25
   ): Promise<{ resultIds: string[]; total: number; next?: string; prev?: string }> {
-    const apiUrl = import.meta.env.VITE_API_URL || "https://frontend-take-home-service.fetch.com";
+    const apiUrl = "https://frontend-take-home-service.fetch.com";
     let url = new URL(`${apiUrl}/dogs/search`);
   
     // Append breed filters
@@ -71,7 +71,7 @@ export async function searchDogs(
   
   // Fetches detailed dog objects for a given array of dog IDs
   export async function fetchDogs(dogIds: string[]): Promise<Dog[]> {
-    const apiUrl = import.meta.env.VITE_API_URL || "https://frontend-take-home-service.fetch.com";
+    const apiUrl = "https://frontend-take-home-service.fetch.com";
     const response = await fetch(`${apiUrl}/dogs`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -88,7 +88,7 @@ export async function searchDogs(
 
 //generate match function
 export async function generateMatch(dogIds: string[]): Promise<{ match: string }> {
-    const apiUrl = import.meta.env.VITE_API_URL || "https://frontend-take-home-service.fetch.com";
+    const apiUrl = "https://frontend-take-home-service.fetch.com";
     const response = await fetch(`${apiUrl}/dogs/match`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
